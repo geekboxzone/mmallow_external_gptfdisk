@@ -23,7 +23,6 @@
 #include <iostream>
 #include <sstream>
 #include <errno.h>
-#include <popt.h>
 #include "gptcl.h"
 
 GPTDataCL::GPTDataCL(void) {
