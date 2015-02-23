@@ -271,7 +271,7 @@ int DiskIO::DiskSync(void) {
 // Note that seeking beyond the end of the file is NOT detected as a failure!
 int DiskIO::Seek(uint64_t sector) {
    int retval = 1;
-   off_t seekTo, sought;
+   off64_t seekTo, sought;
 
    // If disk isn't open, try to open it....
    if (!isOpen) {
