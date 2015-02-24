@@ -360,10 +360,17 @@ void GPTPart::ShowSummary(int partNum, uint32_t blockSize) {
 
 // Show detailed partition information. Does nothing if the partition is
 // empty (as determined by firstLBA being 0).
-void GPTPart::ShowDetails(uint32_t blockSize) {
+void GPTPart::ShowDetails(uint32_t blockSize, bool raw) {
    uint64_t size;
 
    if (firstLBA != 0) {
+      if (raw) {
+         cout << "TYPE_GUID=" << partitionType << "\n";
+         cout << "PART_GUID=" << uniqueGUID << "\n";
+         cout << "PART_NAME=" << GetDescription() << "\n";
+         return;
+      }
+
       cout << "Partition GUID code: " << partitionType;
       cout << " (" << partitionType.TypeName() << ")\n";
       cout << "Partition unique GUID: " << uniqueGUID << "\n";

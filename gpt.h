@@ -129,7 +129,7 @@ public:
    void ShowGPTState(void);
    void DisplayGPTData(void);
    void DisplayMBRData(void) {protectiveMBR.DisplayMBRData();}
-   void ShowPartDetails(uint32_t partNum);
+   void ShowPartDetails(uint32_t partNum, bool raw);
 
    // Convert between GPT and other formats
    virtual WhichToUse UseWhichPartitions(void);
