@@ -23,11 +23,7 @@
 #define __GPTCL_H
 
 #include "gpt.h"
-#ifdef __ANDROID__
-#include "android_popt.h"
-#else
 #include <popt.h>
-#endif
 
 using namespace std;
 

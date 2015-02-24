@@ -26,11 +26,7 @@
    #endif
 typedef unsigned char my_uuid_t[16];
 #else // Not Windows
-#ifdef __ANDROID__
-#include <uuid.h>
-#else
 #include <uuid/uuid.h>
-#endif
 typedef uuid_t my_uuid_t;
 #endif
 

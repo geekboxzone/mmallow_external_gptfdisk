@@ -11,7 +11,7 @@
  * GNU General Public License for more details.
  */
 
-#include "android_popt.h"
+#include <popt.h>
 
 // #define LOCAL_DEBUG
 
