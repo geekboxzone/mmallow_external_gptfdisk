@@ -89,7 +89,7 @@ class GPTPart {
       GPTPart & operator=(const GPTPart & orig);
       bool operator<(const GPTPart &other) const;
       void ShowSummary(int partNum, uint32_t blockSize); // display summary information (1-line)
-      void ShowDetails(uint32_t blockSize, bool raw); // display detailed information (multi-line)
+      void ShowDetails(uint32_t blockSize); // display detailed information (multi-line)
       void BlankPartition(void); // empty partition of data
       int DoTheyOverlap(const GPTPart & other); // returns 1 if there's overlap
       void ReversePartBytes(void); // reverse byte order of all integer fields

@@ -1449,9 +1449,9 @@ void GPTData::DisplayGPTData(void) {
 } // GPTData::DisplayGPTData()
 
 // Show detailed information on the specified partition
-void GPTData::ShowPartDetails(uint32_t partNum, bool raw) {
+void GPTData::ShowPartDetails(uint32_t partNum) {
    if ((partNum < numParts) && !IsFreePartNum(partNum)) {
-      partitions[partNum].ShowDetails(blockSize, raw);
+      partitions[partNum].ShowDetails(blockSize);
    } else {
       cout << "Partition #" << partNum + 1 << " does not exist.\n";
    } // if
