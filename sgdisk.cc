@@ -70,7 +70,8 @@ static int android_dump(char* device) {
             partData = gptData[i];
             if (partData.GetFirstLBA() > 0) {
                 res << "PART " << (i + 1) << " " << partData.GetType() << " "
-                        << partData.GetUniqueGUID() << endl;
+                        << partData.GetUniqueGUID() << " "
+                        << partData.GetDescription() << endl;
             }
         }
         break;
